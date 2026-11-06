@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Material3 theme (light only) with the Crave palette: required by AppCompatActivity and BottomNavigationView -->
+    <style name="Theme.Crave" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/crave_brown</item>
+        <item name="colorOnPrimary">@color/crave_cream</item>
+        <item name="colorSecondary">@color/crave_terracotta</item>
+        <item name="colorOnSecondary">@color/crave_cream</item>
+        <item name="android:colorBackground">@color/crave_cream</item>
+        <item name="colorSurface">@color/crave_cream</item>
+        <item name="colorOnSurface">@color/crave_black</item>
+        <item name="colorOnSurfaceVariant">@color/crave_gray</item>
+        <item name="colorSecondaryContainer">@color/crave_terracotta_light</item>
+        <item name="colorOnSecondaryContainer">@color/crave_brown</item>
+    </style>
+</resources>

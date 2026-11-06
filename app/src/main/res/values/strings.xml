@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Crave</string>
+    <!-- List messages (built by MainViewModel) -->
+    <string name="empty_meals">No se encontraron recetas.</string>
+    <string name="error_connection">Error de conexión. Verificá tu conexión a internet.</string>
+    <string name="error_unexpected">Ocurrió un error inesperado.</string>
+    <!-- List item -->
+    <string name="cd_meal_image">Foto del plato</string>
+    <!-- Main screen -->
+    <string name="home_title">Crave</string>
+    <string name="home_subtitle">Recetas del mundo</string>
+    <string name="label_category">Categoría</string>
+    <string name="search_hint">Buscar por plato o ingrediente</string>
+    <!-- Detail -->
+    <string name="error_meal_not_found">No se encontró la receta.</string>
+    <string name="unknown_data">Sin datos</string>
+    <string name="save_meal">Guardar en la libreta</string>
+    <string name="remove_meal">Quitar de la libreta</string>
+    <string name="ingredients_title">Ingredientes</string>
+    <string name="steps_title">Preparación</string>
+    <string name="detail_title">Receta</string>
+    <string name="cd_back">Volver</string>
+    <!-- Cookbook and navigation -->
+    <string name="nav_explore">Explorar</string>
+    <string name="nav_cookbook">Mi libreta</string>
+    <string name="cookbook_title">Mi libreta</string>
+    <string name="cookbook_subtitle">Recetas guardadas</string>
+    <string name="empty_cookbook">Todavía no guardaste recetas.\nAbrí una y tocá \"Guardar en la libreta\".</string>
+</resources>
