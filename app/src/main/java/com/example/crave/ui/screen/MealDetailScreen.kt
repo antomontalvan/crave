@@ -26,7 +26,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.example.crave.R
@@ -36,6 +35,7 @@ import com.example.crave.ui.components.MealImage
 import com.example.crave.ui.components.MealTitleSection
 import com.example.crave.ui.components.SaveButton
 import com.example.crave.ui.components.StepsSection
+import com.example.crave.ui.theme.Fraunces
 import com.example.crave.ui.viewmodel.DetailViewModel
 
 /**
@@ -54,7 +54,7 @@ fun MealDetailScreen(viewModel: DetailViewModel, onBack: () -> Unit) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(text = stringResource(R.string.detail_title), fontFamily = FontFamily.Serif) },
+                title = { Text(text = stringResource(R.string.detail_title), fontFamily = Fraunces) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
                         Icon(
@@ -93,7 +93,7 @@ fun MealDetailScreen(viewModel: DetailViewModel, onBack: () -> Unit) {
                     text = currentMessage,
                     modifier = Modifier.padding(24.dp),
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    fontFamily = FontFamily.Serif,
+                    fontFamily = Fraunces,
                     textAlign = TextAlign.Center
                 )
             }

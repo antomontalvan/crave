@@ -13,10 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Crave">
+        <!-- Splash: it's the first screen that opens when tapping the app icon -->
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.Crave">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +24,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Main screen: it's only opened from the splash -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Crave" />
 
         <!-- Detail screen (Compose). It can't be opened from outside the app. -->
         <activity

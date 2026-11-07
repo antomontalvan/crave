@@ -4,12 +4,11 @@ App de recetas para Android hecha para el 2do parcial de Desarrollo de Aplicacio
 
 ## Video
 
-<!-- Arrastrar el video acá al editar el README en GitHub (o pegar el link de YouTube/Drive) -->
-
-[VIDEO]
+[Ver el video demo en Google Drive](https://drive.google.com/file/d/1lAY7VHQXhPrgUiYZVFNT_USICWOmAJm8/view?usp=drive_link)
 
 ## Qué hace
 
+- **Splash:** al abrir la app se muestra "CRAVE" con el subtítulo "Recipes worth keeping" y después pasa a la pantalla principal.
 - **Explorar:** lista de platos por categoría (se elige en un Spinner). Cada plato muestra su foto y el nombre.
 - **Buscar:** por nombre del plato o por ingrediente. Se usan `search.php?s=` y `filter.php?i=` y se juntan los resultados sin repetir.
 - **Detalle:** categoría, área de origen, ingredientes con sus medidas y los pasos de la preparación. Esta pantalla está hecha en Jetpack Compose.
@@ -45,6 +44,7 @@ com.example.crave
 │   ├── screen       -> MealDetailScreen (Compose)
 │   ├── theme        -> colores y tema de Compose
 │   └── viewmodel    -> MainViewModel, DetailViewModel
+├── SplashActivity   -> pantalla de inicio, abre MainActivity
 ├── MainActivity     -> contiene los fragments y la barra de abajo
 └── DetailActivity   -> abre la pantalla de detalle
 ```

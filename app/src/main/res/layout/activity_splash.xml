@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Splash: "CRAVE", a short terracotta line and the subtitle, centered on the cream background -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/crave_cream"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".SplashActivity">
+
+    <TextView
+        android:id="@+id/tvSplashTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fraunces_regular"
+        android:letterSpacing="0.15"
+        android:text="@string/app_name"
+        android:textAllCaps="true"
+        android:textColor="@color/crave_brown"
+        android:textSize="46sp" />
+
+    <!-- Decorative line between title and subtitle -->
+    <View
+        android:layout_width="24dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/crave_terracotta" />
+
+    <TextView
+        android:id="@+id/tvSplashSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fraunces_regular"
+        android:letterSpacing="0.2"
+        android:text="@string/splash_subtitle"
+        android:textAllCaps="true"
+        android:textColor="@color/crave_gray"
+        android:textSize="16sp" />
+
+</LinearLayout>

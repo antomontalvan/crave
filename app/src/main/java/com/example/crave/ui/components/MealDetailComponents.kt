@@ -12,15 +12,15 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
 import com.example.crave.R
 import com.example.crave.ui.theme.CraveTheme
+import com.example.crave.ui.theme.Fraunces
 import com.squareup.picasso.Picasso
 
 /**
@@ -45,11 +45,12 @@ fun MealImage(imageUrl: String, modifier: Modifier = Modifier) {
                 .error(android.R.drawable.ic_menu_report_image)
                 .into(imageView)
         },
-        modifier = modifier
+        // clipToBounds: CENTER_CROP enlarges the photo, so it's cut to the 280dp box instead of covering the title.
+        modifier = modifier.clipToBounds()
     )
 }
 
-/** Category and origin (small, uppercase) and the meal name in serif. */
+/** Category and origin (small, uppercase) and the meal name in Fraunces. */
 @Composable
 fun MealTitleSection(name: String, category: String, area: String) {
     // The API sometimes sends an empty origin: we show a default text.
@@ -65,8 +66,7 @@ fun MealTitleSection(name: String, category: String, area: String) {
         Text(
             text = name,
             color = MaterialTheme.colorScheme.primary,
-            fontFamily = FontFamily.Serif,
-            fontWeight = FontWeight.Bold,
+            fontFamily = Fraunces,
             fontSize = 28.sp,
             lineHeight = 34.sp
         )
@@ -114,8 +114,7 @@ fun StepsSection(steps: List<String>) {
                 Text(
                     text = "${index + 1}",
                     color = MaterialTheme.colorScheme.secondary,
-                    fontFamily = FontFamily.Serif,
-                    fontWeight = FontWeight.Bold,
+                    fontFamily = Fraunces,
                     fontSize = 20.sp
                 )
                 Text(
@@ -134,8 +133,7 @@ private fun SectionTitle(text: String) {
     Text(
         text = text,
         color = MaterialTheme.colorScheme.primary,
-        fontFamily = FontFamily.Serif,
-        fontWeight = FontWeight.Bold,
+        fontFamily = Fraunces,
         fontSize = 20.sp
     )
 }

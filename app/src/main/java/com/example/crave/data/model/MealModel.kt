@@ -56,5 +56,20 @@ data class MealDetailModel(
 ){
     /** Instructions come as a single text: they're split into steps at each line break. */
     val steps: List<String>
-        get() = instructions.split("\n").map { it.trim() }.filter { it.isNotBlank() }
+        get() {
+            val lines = instructions.split("\n")
+                .map { it.trim() }
+                .filter { it.isNotBlank() }
+                // A line with no letters ("▢", "1.", "-") is just a separator, not a step.
+                .filter { line -> line.any { it.isLetter() } }
+                // Some recipes add header lines like "step 1" — we drop them so they don't count as a step.
+                .filter { !it.matches(Regex("(step\\s*)?\\d+\\.?", RegexOption.IGNORE_CASE)) }
+            if (lines.size > 1) return lines
+
+            // Other recipes come as a single paragraph with no line breaks: we split it by sentences instead.
+            return instructions.split(". ")
+                .map { it.trim() }
+                .filter { it.isNotBlank() }
+                .map { if (it.endsWith(".")) it else "$it." }
+        }
 }

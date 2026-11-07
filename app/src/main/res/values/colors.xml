@@ -2,6 +2,7 @@
 <resources>
     <!-- Crave palette (bistro / café inspired) -->
     <color name="crave_cream">#F5F1EA</color>      <!-- general background -->
+    <color name="crave_cream_dark">#EAE2D5</color> <!-- bottom bar background -->
     <color name="crave_surface">#FFFDF9</color>    <!-- card background -->
     <color name="crave_brown">#4A2511</color>      <!-- primary color -->
     <color name="crave_terracotta">#C8642F</color> <!-- accent: buttons and selection -->

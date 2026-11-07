@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Crave</string>
+    <!-- Splash -->
+    <string name="splash_subtitle">Recipes worth keeping</string>
     <!-- List messages (built by MainViewModel) -->
     <string name="empty_meals">No se encontraron recetas.</string>
     <string name="error_connection">Error de conexión. Verificá tu conexión a internet.</string>
