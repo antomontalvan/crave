@@ -16,7 +16,7 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        // After 1500L we open the main screen.
+        // After 1.5 seconds (1500 ms) we open the main screen.
         Handler(Looper.getMainLooper()).postDelayed({
             startActivity(Intent(this, MainActivity::class.java))
             // finish(): the splash is closed so the back button doesn't return to it.
