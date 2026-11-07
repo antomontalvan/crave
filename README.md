@@ -63,4 +63,4 @@ Retrofit 2 + Gson, Picasso, Kotlin Coroutines, AndroidX Lifecycle (ViewModel y L
 
 ---
 
-Alumna: Antonella Montalvan
+Alumna: Antonella Montalván

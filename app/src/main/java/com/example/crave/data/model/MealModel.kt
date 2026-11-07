@@ -54,7 +54,7 @@ data class MealDetailModel(
     val instructions: String,
     val ingredients: List<String>
 ){
-    /** Instructions come as a single text: they're split into steps at each line break. */
+    /** Instructions come as a single text: they're split into steps at each line break (or by sentences if there are none). */
     val steps: List<String>
         get() {
             val lines = instructions.split("\n")
